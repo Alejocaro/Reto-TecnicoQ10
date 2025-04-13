@@ -1,0 +1,50 @@
+# Dependencias
+node_modules/
+package-lock.json
+
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Archivos generados por Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+cypress/results/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Directorios generados por sistema operativo
+.DS_Store
+Thumbs.db
+
+# Directorios y archivos de IDE/editores
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Archivos temporales
+*.tmp
+*.temp
+.tmp/
+temp/
+
+# Cobertura de código
+coverage/
+.nyc_output/
+
+# Archivos de compilación
+dist/
+build/ 

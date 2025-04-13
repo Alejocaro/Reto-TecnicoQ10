@@ -1,0 +1,40 @@
+{
+  "estudiante1": {
+    "primerNombre": "Juan",
+    "segundoNombre": "Pablo",
+    "primerApellido": "Gomez",
+    "segundoApellido": "Perez",
+    "tipoIdentificacion": "Cédula de Ciudadanía",
+    "numeroIdentificacion": "1234567890",
+    "sexo": "Masculino",
+    "correo": "juan.gomez@ejemplo.com",
+    "telefono": "3123456789",
+    "celular": "3123456789",
+    "fechaNacimiento": "04/04/1999",
+    "lugarNacimiento": "Medellín",
+    "direccion": "Calle 45 #12-34",
+    "lugarResidencia": "Medellín",
+    "periodo": "2025-I (Ejemplo)",
+    "sedeJornada": "Principal - Noche",
+    "programa": "Ingeniería de Sistemas (Ejemplo)"
+  },
+  "estudiante2": {
+    "primerNombre": "Maria",
+    "segundoNombre": "Alejandra",
+    "primerApellido": "Rodriguez",
+    "segundoApellido": "Lopez",
+    "tipoIdentificacion": "Cédula de Ciudadanía",
+    "numeroIdentificacion": "9876543210",
+    "sexo": "Femenino",
+    "correo": "maria.rodriguez@ejemplo.com",
+    "telefono": "3001234567",
+    "celular": "3001234567",
+    "fechaNacimiento": "15/08/2000",
+    "lugarNacimiento": "Bogotá",
+    "direccion": "Carrera 10 #25-30",
+    "lugarResidencia": "Bogotá",
+    "periodo": "2025-I (Ejemplo)",
+    "sedeJornada": "Principal - Diurna",
+    "programa": "Administración de Empresas (Ejemplo)"
+  }
+} 
