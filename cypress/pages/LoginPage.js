@@ -8,7 +8,7 @@ class LoginPage {
 
     visit() {
         cy.visit('/User/Login')
-        cy.wait(1000)
+        cy.wait(5000)
     }
 
     handleVueError() {
