@@ -29,7 +29,6 @@ describe('Editar Estudiantes', () => {
         cy.contains('Estudiantes').should('be.visible').should('exist').first().click()
         cy.contains('Información básica').first().click({force: true})
     })
-
     it('Editar información personal y basica del estudiante', () => {
         cy.task('getLastStudentId').then((numeroIdentificacion) => {
             cy.log('Usando número de identificación: ' + numeroIdentificacion)
