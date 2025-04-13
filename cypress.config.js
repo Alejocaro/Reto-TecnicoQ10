@@ -1,7 +1,5 @@
 const { defineConfig } = require("cypress");
 require('dotenv').config();
-
-// Variable global para almacenar el ID del estudiante registrado
 let lastStudentId = null;
 
 module.exports = defineConfig({
@@ -15,8 +13,6 @@ module.exports = defineConfig({
         usuario: process.env.usuario,
         contrasena: process.env.contrasena,
       }
-      
-      // Definir tareas para compartir datos entre pruebas
       on('task', {
         setLastStudentId: (id) => {
           lastStudentId = id;
@@ -29,7 +25,6 @@ module.exports = defineConfig({
       
       return config;
     },
-    // Ordenar pruebas para que se ejecuten en un orden específico
     specPattern: [
       "cypress/e2e/auth/login.cy.js",
       "cypress/e2e/estudiantes/registrarEstudiantes.cy.js", 
