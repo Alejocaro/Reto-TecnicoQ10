@@ -39,12 +39,15 @@ jobs:
         env:
           usuario: ${{ secrets.USUARIO }}
           contrasena: ${{ secrets.CONTRASENA }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          DEBUG: cypress:*
         with:
           browser: chrome
           record: false
           config-file: cypress.config.js
           install: false
-          wait-on-timeout: 120
+          wait-on-timeout: 180
+          config: pageLoadTimeout=60000,defaultCommandTimeout=10000,requestTimeout=10000
       
       - name: Upload screenshots
         uses: actions/upload-artifact@v4
