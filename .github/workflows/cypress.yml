@@ -27,6 +27,13 @@ jobs:
       - name: Install dependencies
         run: npm install
       
+      - name: Debug - Show Environment
+        run: |
+          echo "Node version: $(node -v)"
+          echo "NPM version: $(npm -v)"
+          ls -la
+          cat package.json
+          
       - name: Cypress run
         uses: cypress-io/github-action@v6
         env:
@@ -36,7 +43,6 @@ jobs:
           browser: chrome
           record: false
           config-file: cypress.config.js
-          command: npm run cypress:run
           install: false
           wait-on-timeout: 120
       
