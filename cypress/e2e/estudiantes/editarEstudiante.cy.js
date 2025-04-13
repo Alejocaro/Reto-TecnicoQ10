@@ -33,8 +33,6 @@ describe('Editar Estudiantes', () => {
     it('Editar información personal y basica del estudiante', () => {
         cy.task('getLastStudentId').then((numeroIdentificacion) => {
             cy.log('Usando número de identificación: ' + numeroIdentificacion)
-            
-            // Buscar el estudiante usando el número de identificación
             cy.get(editarEstudiante.buscarEstudiante).type(numeroIdentificacion)
             cy.get(editarEstudiante.botonBuscar).click()
             cy.get(editarEstudiante.tablaEstudiantes).should('be.visible')

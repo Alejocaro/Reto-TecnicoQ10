@@ -7,7 +7,7 @@ describe('Registrar Estudiantes', () => {
     let datosEstudiante = {};
     
     beforeEach(() => {
-        // Guardar los datos aleatorios para validaciones posteriores
+
         datosEstudiante = {
             primerNombre: ESTUDIANTE_CONSTANTES.PRIMER_NOMBRE,
             numeroIdentificacion: ESTUDIANTE_CONSTANTES.NUMERO_IDENTIFICACION,
@@ -26,8 +26,6 @@ describe('Registrar Estudiantes', () => {
         cy.wait(1000);
         cy.contains('Registrar estudiante').first().click({ force: true })
         
-        // Esperar a que el formulario esté visible
-        cy.wait(2000)
     })
 
     it('Registrar un estudiante', () => {
@@ -64,22 +62,13 @@ describe('Registrar Estudiantes', () => {
             }
         })
         cy.get(registrarEstudiante.lugarResidenciaWrapper).should('be.visible').should('exist').type('Medellín{enter}')
-        cy.wait(1000)
-
         cy.get(registrarEstudiante.periodo).should('be.visible').should('exist').click()
-        cy.wait(500)
         cy.get('.dropdown-menu.open li').contains('2025-I (Ejemplo)').click({ force: true })
-
         cy.get(registrarEstudiante.sedeJornada).should('be.visible').should('exist').click()
-        cy.wait(500)
         cy.get('.dropdown-menu.open li').contains('Principal - Noche').click({ force: true }) 
-
         cy.get(registrarEstudiante.programa).should('be.visible').should('exist').click({ force: true })
-        cy.wait(500)
         cy.get('.dropdown-menu.open li').contains('Ingeniería de Sistemas (Ejemplo)').click({ force: true })
-
         cy.get(registrarEstudiante.botonAceptar).should('be.visible').should('exist').first().click()
-    
         cy.log(`Estudiante registrado con nombre: ${datosEstudiante.primerNombre}`)
         cy.log(`Número de identificación: ${datosEstudiante.numeroIdentificacion}`)
         cy.log(`Correo electrónico: ${datosEstudiante.correo}`)

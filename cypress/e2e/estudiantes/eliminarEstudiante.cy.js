@@ -16,7 +16,6 @@ describe('Eliminar Estudiantes', () => {
         loginPage.login(Cypress.env('usuario'), Cypress.env('contrasena'))
         cy.get(loginPage.elements.iconoNotificaciones).should('be.visible')
     
-        // Navegación al módulo de estudiantes
         cy.contains('Institucional').click()
         cy.wait(1000)
         cy.contains('Estudiantes').should('be.visible').first().click()
@@ -65,7 +64,7 @@ describe('Eliminar Estudiantes', () => {
   
             cy.get('body').then(($body) => {
               if ($body.find(editarEstudiante.tablaEstudiantes).length > 0) {
-                // Si la tabla existe, verificar que no contiene el estudiante
+
                 cy.get(editarEstudiante.tablaEstudiantes).then(($tabla) => {
                   const contieneDatos = $tabla.find('tbody tr').length > 0
                   
@@ -81,7 +80,6 @@ describe('Eliminar Estudiantes', () => {
                   }
                 })
               } else {
-                // Si no hay tabla, es porque no se encontraron registros
                 cy.log('Verificado: No hay registros, el estudiante fue eliminado correctamente')
               }
             })
