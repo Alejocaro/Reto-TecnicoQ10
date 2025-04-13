@@ -33,18 +33,15 @@ export const editarEstudiante = {
 };
 
 export const editarSNIES = {
-    // Pestañas del formulario
     pestanaGeneral: 'a[href="#general"][data-toggle="tab"]',
     pestanaSNIES1: 'a[href="#SNIES"][data-toggle="tab"]',
     pestanaSNIES2: 'a[href="#SNIES2"][data-toggle="tab"]',
-    // Campos del formulario
     expedicionDocumento: 'input[placeholder="Seleccione municipio"]',
     fechaExpedicion: 'input#EducacionSuperior_per_fecha_expedicion_documento',
     estadoCivil: '[data-id="EducacionSuperior_per_estado_civil"] .filter-option',
     grupoEtnico: 'button[data-id="EducacionSuperior_per_snies_grupo_etnico"] .filter-option',
     comunidadNegra: 'button[data-id="EducacionSuperior_per_snies_comunidad_negra"]',
     discapacidad: 'button[data-id="EducacionSuperior_per_discapacidad"] .filter-option',
-    // Botones
     botonAceptar: 'input.btn.btn-primary[value="Aceptar"]',
     alertExitosa: '.alert.alert-success',
 };
