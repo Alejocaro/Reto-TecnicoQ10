@@ -9,8 +9,8 @@ module.exports = defineConfig({
     baseUrl: 'https://site2.q10.com',
     setupNodeEvents(on, config) {
       config.env = {
-        usuario: process.env.usuario || 'ALEJANDROC818@GMAIL.COM',
-        contrasena: process.env.contrasena || '2163500aA*',
+        usuario: process.env.usuario,
+        contrasena: process.env.contrasena,
       }
       on('task', {
         setLastStudentId: (id) => {
