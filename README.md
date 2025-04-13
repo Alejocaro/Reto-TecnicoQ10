@@ -98,3 +98,26 @@ El proyecto utiliza tasks de Cypress para mantener el ID del estudiante registra
 ## Autor
 
 Alejandro Caro 
+
+## Integración con GitHub Actions
+
+Este proyecto está configurado para ejecutar pruebas automáticamente utilizando GitHub Actions. La configuración se encuentra en el archivo `.github/workflows/cypress.yml`.
+
+### Configuración
+
+1. En tu repositorio de GitHub, ve a **Settings** > **Secrets and variables** > **Actions**
+2. Añade los siguientes secrets:
+   - `USUARIO`: Tu nombre de usuario para la plataforma Q10
+   - `CONTRASENA`: Tu contraseña para la plataforma Q10
+
+### Funcionamiento
+
+Las pruebas se ejecutarán automáticamente:
+- Cuando se realice un push a las ramas `main` o `master`
+- Cuando se cree un Pull Request hacia las ramas `main` o `master`
+- Manualmente desde la pestaña "Actions" usando la opción "workflow_dispatch"
+
+### Visualización de resultados
+
+- Los resultados de las pruebas se mostrarán directamente en GitHub
+- Si las pruebas fallan, las capturas de pantalla se guardarán como artefactos y podrás descargarlas para analizar los errores 
