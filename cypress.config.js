@@ -5,16 +5,6 @@ let lastStudentId = null;
 module.exports = defineConfig({
   viewportWidth: 1366,
   viewportHeight: 768,
-  defaultCommandTimeout: 10000,
-  pageLoadTimeout: 60000,
-  requestTimeout: 10000,
-  responseTimeout: 30000,
-  numTestsKeptInMemory: 0,
-  chromeWebSecurity: false,
-  retries: {
-    runMode: 2,
-    openMode: 0
-  },
   e2e: {
     baseUrl: 'https://site2.q10.com',
     setupNodeEvents(on, config) {
